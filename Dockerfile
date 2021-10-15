@@ -147,6 +147,6 @@ RUN set -ex; \
     apk del .fetch-deps
 
 COPY entrypoint.sh /
-
+EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/bin/supervisord","-n","-c","/etc/supervisord.conf"]
