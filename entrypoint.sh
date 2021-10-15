@@ -6,12 +6,7 @@ directory_empty() {
     [ -z "$(ls -A "$1/")" ]
 }
 
-waiting_for_connection(){
-  until nc -z -w 3 "$1" "$2"; do
-    >&2 echo "Waiting for connection to the $1 host on port $2"
-    sleep 1
-  done
-}
+
 
 file_env() {
     local var="$1"
